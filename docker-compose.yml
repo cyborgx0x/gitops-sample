@@ -4,8 +4,7 @@ services:
     build: ./app
     ports:
       - "${APP_PORT}:${APP_PORT}"
-    env_file:
-      - ../stack.env
+    env_file: stack.env
     deploy:
       replicas: 2
       restart_policy:
