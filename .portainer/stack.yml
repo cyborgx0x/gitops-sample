@@ -1,0 +1,15 @@
+version: 2
+
+name: my-gitops-stack # Tên stack trên Portainer
+stackfile: docker-compose.yml
+
+# Cấu hình GitOps
+git:
+  url: https://github.com/cyborgx0x/gitops-sample
+  ref: main # Nhánh hoặc tag
+  deploy:
+    # Tự động deploy khi có thay đổi
+    on:
+      push:
+        branches:
+          - main
